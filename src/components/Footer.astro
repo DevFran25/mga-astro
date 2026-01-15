@@ -1,0 +1,92 @@
+---
+import PdfModal from './PdfModal.astro';
+---
+
+<footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <!-- Brand -->
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="/assets/img/MGA.svg" alt="MGA Logo" class="h-12 w-auto bg-white/5 rounded-lg p-1.5 border border-white/10">
+                    <div>
+                        <span class="block text-white font-extrabold text-xl leading-none">MGA</span>
+                        <span class="block text-[10px] text-mga-blue font-bold tracking-widest uppercase mt-1">Ingenieros</span>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                    Consultoría experta en ingeniería y construcción. Transformamos visiones en realidad.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-mga-blue hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-mga-blue hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-mga-blue hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-span-1 md:col-span-1">
+                <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest border-l-2 border-mga-orange pl-3">Contacto</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-3 group cursor-pointer">
+                        <div class="mt-1 w-5 h-5 rounded-full bg-mga-blue/10 flex items-center justify-center group-hover:bg-mga-blue group-hover:text-white transition-all">
+                            <i class="fas fa-envelope text-xs text-mga-blue group-hover:text-white"></i>
+                        </div>
+                        <a href="mailto:mga7753@hotmail.com" class="hover:text-white transition-colors">mga7753@hotmail.com</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-mga-blue/10 flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-xs text-mga-blue"></i>
+                        </div>
+                        <span>Cobertura a nivel nacional en todo el Perú</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-mga-blue/10 flex items-center justify-center">
+                            <i class="far fa-id-card text-xs text-mga-blue"></i>
+                        </div>
+                        <span>RUC: 20541144511</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-span-1 md:col-span-1">
+                <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest border-l-2 border-mga-blue pl-3">Enlaces</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="/" class="hover:text-mga-blue hover:translate-x-1 inline-block transition-all">Inicio</a></li>
+                    <li><a href="/#nosotros" class="hover:text-mga-blue hover:translate-x-1 inline-block transition-all">Sobre Nosotros</a></li>
+                    <li><a href="/portafolio" class="hover:text-mga-blue hover:translate-x-1 inline-block transition-all">Proyectos</a></li>
+                    <li><a href="/#servicios" class="hover:text-mga-blue hover:translate-x-1 inline-block transition-all">Servicios</a></li>
+                    <li><a href="/#presupuesto" class="hover:text-mga-orange hover:translate-x-1 inline-block transition-all">Solicitar Cotización</a></li>
+                </ul>
+            </div>
+
+                <!-- Certifications -->
+            <div class="col-span-1 md:col-span-1">
+                <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest border-l-2 border-green-500 pl-3">Certificaciones</h4>
+                <p class="text-xs text-slate-500 mb-4">Comprometidos con la calidad y la gestión antisoborno.</p>
+                <div class="flex gap-3">
+                        <button onclick="openPdfModal('/assets/pdf/ISO_9001.pdf', 'ISO 9001:2015')" class="block w-20 bg-white rounded p-1 hover:scale-105 transition-transform text-left">
+                        <span class="block text-center text-[8px] font-bold text-slate-800 border border-slate-200 h-full flex items-center justify-center p-2">
+                            <i class="fa fa-certificate text-lg mb-1 text-mga-blue"></i><br>ISO<br>9001
+                        </span>
+                    </button>
+                    <button onclick="openPdfModal('/assets/pdf/ISO_37001.pdf', 'ISO 37001:2016')" class="block w-20 bg-white rounded p-1 hover:scale-105 transition-transform text-left">
+                        <span class="block text-center text-[8px] font-bold text-slate-800 border border-slate-200 h-full flex items-center justify-center p-2">
+                            <i class="fa fa-certificate text-lg mb-1 text-mga-blue"></i><br>ISO<br>37001
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-600">
+            <div class="mb-4 md:mb-0">
+                    <img src="/assets/img/MGA_LOGO.png" alt="MGA Footer Logo" class="h-8 opacity-50 grayscale hover:grayscale-0 transition-all">
+            </div>
+            <p>&copy; 2026 MGA Ingenieros Asociados EIRL. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<PdfModal />
