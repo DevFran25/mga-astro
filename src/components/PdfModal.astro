@@ -1,0 +1,58 @@
+<!-- PDF Modal -->
+<div id="pdf-modal" class="fixed inset-0 z-[60] bg-black/90 hidden backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 w-full max-w-5xl h-[85vh] rounded-2xl overflow-hidden flex flex-col shadow-2xl border border-slate-700">
+        <div class="flex justify-between items-center p-4 border-b border-slate-800 bg-slate-900">
+            <h3 id="pdf-modal-title" class="text-white font-bold text-lg">Vista Previa</h3>
+            <button id="close-pdf-btn" class="text-slate-400 hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-800">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+        <div class="flex-1 bg-slate-800 relative">
+            <iframe id="pdf-frame" class="w-full h-full" src=""></iframe>
+            <div class="absolute inset-0 pointer-events-none" oncontextmenu="return false;"></div>
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+    // Exposed to window for legacy onclick support
+    window.openPdfModal = function(pdfUrl, title) {
+        const modal = document.getElementById('pdf-modal');
+        const frame = document.getElementById('pdf-frame');
+        const modalTitle = document.getElementById('pdf-modal-title');
+        
+        if (modal && frame && modalTitle) {
+            frame.src = pdfUrl + '#toolbar=0&navpanes=0&scrollbar=0';
+            modalTitle.textContent = title;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    window.closePdfModal = function() {
+        const modal = document.getElementById('pdf-modal');
+        const frame = document.getElementById('pdf-frame');
+        
+        if (modal && frame) {
+            modal.classList.add('hidden');
+            frame.src = '';
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Event Listeners
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('pdf-modal');
+        const closeBtn = document.getElementById('close-pdf-btn');
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', window.closePdfModal);
+        }
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                window.closePdfModal();
+            }
+        });
+    });
+</script>

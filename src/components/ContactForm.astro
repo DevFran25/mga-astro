@@ -1,0 +1,238 @@
+<section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-mga-blue/20 rounded-full blur-[100px] mix-blend-screen animate-pulse-slow"
+    >
+    </div>
+    <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-mga-orange/20 rounded-full blur-[100px] mix-blend-screen animate-pulse-slow font-sans"
+        style="animation-delay: 2s"
+    >
+    </div>
+
+    <div
+        class="container mx-auto px-4 relative z-10 flex flex-col lg:flex-row items-center gap-16"
+    >
+        <div class="lg:w-1/2">
+            <span
+                class="text-mga-blue font-bold tracking-wider uppercase text-sm mb-2 block"
+                >Experiencia Garantizada</span
+            >
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                Expertos en consultoría electromecánica
+                <br />en todo el Perú
+            </h2>
+            <p
+                class="text-slate-300 text-lg mb-10 leading-relaxed text-left md:text-justify"
+            >
+                Nuestra experiencia abarca proyectos de electrificación y
+                sistemas electromecánicos de alta, media y baja tensión en todo
+                el Perú.
+            </p>
+
+            <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-white/5 backdrop-blur-sm flex items-center justify-center flex-shrink-0 border border-white/10 shadow-inner"
+                    >
+                        <i class="fas fa-certificate text-mga-blue text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-lg">
+                            Certificación de Calidad
+                        </h4>
+                        <p class="text-slate-400 text-sm">
+                            Procesos estandarizados y normas ISO.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-white/5 backdrop-blur-sm flex items-center justify-center flex-shrink-0 border border-white/10 shadow-inner"
+                    >
+                        <i class="fas fa-users-cog text-mga-orange text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-lg">
+                            Equipo Senior Especializado
+                        </h4>
+                        <p class="text-slate-400 text-sm">
+                            Profesionales con amplia trayectoria en campo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote Form Section Anchor -->
+        <div id="presupuesto" class="lg:w-1/2 w-full">
+            <div
+                class="bg-white/95 backdrop-blur-xl border border-white/20 text-slate-800 p-8 md:p-10 rounded-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] relative"
+            >
+                <div
+                    class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-mga-orange to-orange-500 rounded-2xl rotate-3 flex items-center justify-center shadow-lg shadow-orange-500/30 hidden md:flex transform transition-transform hover:rotate-6"
+                >
+                    <i class="fas fa-paper-plane text-white text-2xl"></i>
+                </div>
+
+                <h3 class="text-3xl font-bold text-slate-900 mb-2">
+                    Solicitar Presupuesto
+                </h3>
+                <p class="text-slate-500 mb-8 text-sm">
+                    Cuéntanos sobre tu proyecto y recibe una propuesta a medida.
+                </p>
+
+                <form id="quote-form" class="space-y-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label
+                                class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"
+                                >Nombre Completo</label
+                            >
+                            <input
+                                type="text"
+                                name="name"
+                                required
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/50 focus:border-mga-blue transition-all"
+                                placeholder="Su Nombre"
+                            />
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"
+                                >Teléfono</label
+                            >
+                            <input
+                                type="tel"
+                                name="phone"
+                                required
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/50 focus:border-mga-blue transition-all"
+                                placeholder="999 000 000"
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label
+                            class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"
+                            >Servicio de Interés</label
+                        >
+                        <div class="relative">
+                            <select
+                                name="service"
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/50 focus:border-mga-blue transition-all appearance-none cursor-pointer"
+                                required
+                            >
+                                <option value="" disabled selected
+                                    >Seleccione una opción</option
+                                >
+                                <option value="infraestructura"
+                                    >Infraestructura Vial</option
+                                >
+                                <option value="energia">Energía y Redes</option>
+                                <option value="edificaciones"
+                                    >Edificaciones</option
+                                >
+                                <option value="ambiental">Medio Ambiente</option
+                                >
+                                <option value="otro">Otro</option>
+                            </select>
+                            <i
+                                class="fas fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none text-xs"
+                            ></i>
+                        </div>
+                    </div>
+                    <div>
+                        <label
+                            class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"
+                            >Detalles del Proyecto</label
+                        >
+                        <textarea
+                            name="details"
+                            rows="3"
+                            required
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/50 focus:border-mga-blue transition-all"
+                            placeholder="Breve descripción..."></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        id="submit-btn"
+                        class="w-full bg-slate-900 hover:bg-mga-blue text-white py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl transform active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2 group"
+                    >
+                        <span id="btn-text">Enviar Solicitud</span>
+                        <i
+                            id="btn-spinner"
+                            class="fas fa-spinner fa-spin hidden"></i>
+                        <i
+                            id="btn-icon"
+                            class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
+                        ></i>
+                    </button>
+                    <p class="text-center text-xs text-slate-400">
+                        Respondemos en menos de 24 horas.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const quoteForm = document.getElementById("quote-form");
+        if (quoteForm) {
+            quoteForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const btn = document.getElementById("submit-btn");
+                const btnText = document.getElementById("btn-text");
+                const spinner = document.getElementById("btn-spinner");
+
+                // Loading State
+                btn.disabled = true;
+                const originalText = btnText.textContent;
+                btnText.textContent = "Enviando...";
+                spinner.classList.remove("hidden");
+                document.getElementById("btn-icon").classList.add("hidden");
+
+                // Collect Data
+                const formData = new FormData(quoteForm);
+                const data = Object.fromEntries(formData.entries());
+
+                // Send to API
+                fetch("/api/quote", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            alert(
+                                "¡Solicitud enviada con éxito! Nos pondremos en contacto pronto.",
+                            );
+                            quoteForm.reset();
+                        } else {
+                            throw new Error("Error en el servidor");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                        alert(
+                            "Hubo un error al enviar la solicitud. Por favor intenta de nuevo o contáctanos por WhatsApp.",
+                        );
+                    })
+                    .finally(() => {
+                        // Reset State
+                        btn.disabled = false;
+                        btnText.textContent = originalText;
+                        spinner.classList.add("hidden");
+                        document
+                            .getElementById("btn-icon")
+                            .classList.remove("hidden");
+                    });
+            });
+        }
+    });
+</script>
