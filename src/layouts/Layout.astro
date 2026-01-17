@@ -13,7 +13,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="es" class="scroll-smooth overflow-x-hidden">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,10 +48,10 @@ const {
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		/>
 	</head>
-	<body
-		class="bg-gray-50 text-mga-gray font-sans antialiased overflow-x-hidden"
-	>
-		<slot />
+	<body class="bg-gray-50 text-mga-gray font-sans antialiased w-full">
+		<main class="w-full overflow-x-hidden relative">
+			<slot />
+		</main>
 
 		<!-- Scroll Reveal & Main Logic handled by components or client scripts -->
 	</body>
