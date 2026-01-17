@@ -1,6 +1,6 @@
 <section
     id="stats"
-    class="py-12 relative z-30 -mt-24 mx-4 md:mx-auto max-w-6xl"
+    class="py-12 relative z-30 -mt-24 mx-auto w-[90%] md:w-full md:max-w-6xl"
 >
     <div
         class="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] border border-slate-100 p-8 md:p-12 relative overflow-hidden"
@@ -87,9 +87,10 @@
                         if (entry.isIntersecting && !started) {
                             started = true;
                             statNumbers.forEach((stat) => {
-                                const target = parseInt(
-                                    stat.getAttribute("data-target"),
-                                );
+                                const targetAttr =
+                                    stat.getAttribute("data-target");
+                                if (!targetAttr) return;
+                                const target = parseInt(targetAttr);
                                 const duration = 2000; // ms
                                 const stepTime = 20;
                                 const steps = duration / stepTime;
@@ -99,10 +100,11 @@
                                 const timer = setInterval(() => {
                                     current += increment;
                                     if (current >= target) {
-                                        stat.textContent = target;
+                                        stat.textContent = target.toString();
                                         clearInterval(timer);
                                     } else {
-                                        stat.textContent = Math.ceil(current);
+                                        stat.textContent =
+                                            Math.ceil(current).toString();
                                     }
                                 }, stepTime);
                             });
