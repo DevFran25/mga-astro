@@ -9,7 +9,9 @@ import { projects } from "../data/projects";
     <Header />
 
     <!-- Header Page -->
-    <header class="bg-slate-900 pt-32 pb-20 relative overflow-hidden">
+    <header
+        class="bg-slate-900 pt-24 pb-12 md:pt-32 md:pb-20 relative overflow-hidden"
+    >
         <div class="absolute inset-0 z-0">
             <div
                 class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-mga-blue/20"
@@ -18,7 +20,7 @@ import { projects } from "../data/projects";
         </div>
         <div class="container mx-auto px-4 relative z-10 text-center">
             <h1
-                class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-up"
+                class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-up"
             >
                 Nuestro Portafolio
             </h1>
@@ -40,11 +42,11 @@ import { projects } from "../data/projects";
                 <!-- Filters -->
                 <div class="flex flex-wrap justify-center gap-4 mb-12">
                     <button
-                        class="filter-btn px-6 py-2 bg-mga-blue text-white rounded-full font-bold text-sm shadow-lg transition-all transform hover:-translate-y-1"
+                        class="filter-btn px-4 py-2 md:px-6 bg-mga-blue text-white rounded-full font-bold text-xs md:text-sm shadow-lg transition-all transform hover:-translate-y-1 whitespace-nowrap"
                         data-category="Todos">Todos</button
                     >
                     <button
-                        class="filter-btn px-6 py-2 bg-white text-slate-600 border border-slate-200 rounded-full font-bold text-sm hover:bg-slate-50 transition-all transform hover:-translate-y-1"
+                        class="filter-btn px-4 py-2 md:px-6 bg-white text-slate-600 border border-slate-200 rounded-full font-bold text-xs md:text-sm hover:bg-slate-50 transition-all transform hover:-translate-y-1 whitespace-nowrap"
                         data-category="Infraestructura">Infraestructura</button
                     >
                     <button
