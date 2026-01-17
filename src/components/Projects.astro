@@ -1,14 +1,18 @@
-<section id="proyectos" class="py-24 bg-gray-50/50">
+---
+import { projects } from "../data/projects";
+---
+
+<section id="proyectos" class="py-24 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16 max-w-3xl mx-auto">
             <span
-                class="text-mga-orange font-bold tracking-wider uppercase text-sm"
+                class="text-white font-bold tracking-wider uppercase text-sm bg-mga-orange px-3 py-1 rounded-full shadow-lg shadow-orange-200"
                 >Portafolio</span
             >
-            <h2 class="text-3xl md:text-5xl font-bold text-mga-dark mt-2 mb-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mt-6 mb-6">
                 Nuestros Proyectos Destacados
             </h2>
-            <p class="text-mga-gray text-lg">
+            <p class="text-slate-700 text-lg font-medium">
                 Una muestra de nuestra capacidad técnica y ejecutiva en obras de
                 diversa complejidad a lo largo del territorio nacional.
             </p>
@@ -16,146 +20,49 @@
 
         <!-- Project Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1 -->
-            <div
-                class="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100"
-            >
-                <div class="relative h-64 overflow-hidden">
-                    <div
-                        class="absolute inset-0 bg-mga-dark/20 group-hover:bg-mga-dark/10 transition-colors z-10"
+            {
+                projects.slice(0, 3).map((project) => (
+                    <a
+                        href={`/proyectos/${project.id}`}
+                        class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 cursor-pointer border-2 border-slate-100 hover:border-mga-blue hover:shadow-[0_20px_40px_rgba(33,185,235,0.15)] hover:-translate-y-2 block h-full"
                     >
-                    </div>
-                    <img
-                        src="https://images.unsplash.com/photo-1590486803833-1c5dc8ce2ac6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                        alt="Carretera Central"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div
-                        class="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur text-xs font-bold text-mga-blue px-3 py-1 rounded-full uppercase tracking-wide shadow-sm"
-                    >
-                        Infraestructura
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3
-                        class="text-xl font-bold text-mga-dark mb-2 group-hover:text-mga-blue transition-colors"
-                    >
-                        Mejoramiento Vial Ruta 45
-                    </h3>
-                    <p class="text-mga-gray text-sm mb-4 line-clamp-2">
-                        Rehabilitación y mantenimiento de 150km de carretera con
-                        pavimentación asfáltica en zona de altura.
-                    </p>
-                    <div
-                        class="flex items-center justify-between border-t border-gray-100 pt-4"
-                    >
-                        <span class="text-xs text-gray-400 font-medium"
-                            ><i class="fas fa-map-marker-alt mr-1"></i>
-                            Junín, Perú</span
-                        >
-                        <span
-                            class="text-mga-blue text-sm font-bold group-hover:translate-x-1 transition-transform"
-                            ><i class="fas fa-arrow-right"></i></span
-                        >
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div
-                class="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100"
-            >
-                <div class="relative h-64 overflow-hidden">
-                    <div
-                        class="absolute inset-0 bg-mga-dark/20 group-hover:bg-mga-dark/10 transition-colors z-10"
-                    >
-                    </div>
-                    <img
-                        src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                        alt="Edificio Residencial"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div
-                        class="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur text-xs font-bold text-mga-blue px-3 py-1 rounded-full uppercase tracking-wide shadow-sm"
-                    >
-                        Edificación
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3
-                        class="text-xl font-bold text-mga-dark mb-2 group-hover:text-mga-blue transition-colors"
-                    >
-                        Residencial Miraflores View
-                    </h3>
-                    <p class="text-mga-gray text-sm mb-4 line-clamp-2">
-                        Construcción de edificio multifamiliar de 20 pisos con
-                        certificación LEED y áreas comunes.
-                    </p>
-                    <div
-                        class="flex items-center justify-between border-t border-gray-100 pt-4"
-                    >
-                        <span class="text-xs text-gray-400 font-medium"
-                            ><i class="fas fa-map-marker-alt mr-1"></i>
-                            Lima, Perú</span
-                        >
-                        <span
-                            class="text-mga-blue text-sm font-bold group-hover:translate-x-1 transition-transform"
-                            ><i class="fas fa-arrow-right"></i></span
-                        >
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div
-                class="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100"
-            >
-                <div class="relative h-64 overflow-hidden">
-                    <div
-                        class="absolute inset-0 bg-mga-dark/20 group-hover:bg-mga-dark/10 transition-colors z-10"
-                    >
-                    </div>
-                    <img
-                        src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                        alt="Planta Industrial"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div
-                        class="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur text-xs font-bold text-mga-orange px-3 py-1 rounded-full uppercase tracking-wide shadow-sm"
-                    >
-                        Energía
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3
-                        class="text-xl font-bold text-mga-dark mb-2 group-hover:text-mga-orange transition-colors"
-                    >
-                        Subestación Eléctrica Norte
-                    </h3>
-                    <p class="text-mga-gray text-sm mb-4 line-clamp-2">
-                        Implementación de subestación de potencia y líneas de
-                        transmisión para parque industrial.
-                    </p>
-                    <div
-                        class="flex items-center justify-between border-t border-gray-100 pt-4"
-                    >
-                        <span class="text-xs text-gray-400 font-medium"
-                            ><i class="fas fa-map-marker-alt mr-1"></i>
-                            Trujillo, Perú</span
-                        >
-                        <span
-                            class="text-mga-blue text-sm font-bold group-hover:translate-x-1 transition-transform"
-                            ><i class="fas fa-arrow-right"></i></span
-                        >
-                    </div>
-                </div>
-            </div>
+                        <div class="relative h-64 overflow-hidden">
+                            <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-mga-blue/10 transition-colors z-10 pointer-events-none" />
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div class="absolute top-4 right-4 z-20 bg-white text-xs font-bold text-mga-blue px-3 py-1 rounded-full uppercase tracking-wide shadow-md">
+                                {project.category}
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-mga-blue transition-colors">
+                                {project.title}
+                            </h3>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-2">
+                                {project.shortDesc}
+                            </p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                                <span class="text-xs text-slate-500 font-medium">
+                                    <i class="fas fa-map-marker-alt mr-1 text-mga-orange" />
+                                    {project.location}
+                                </span>
+                                <span class="text-mga-blue text-sm font-bold group-hover:translate-x-1 transition-transform">
+                                    <i class="fas fa-arrow-right" />
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                ))
+            }
         </div>
 
         <div class="text-center mt-12">
             <a
                 href="/portafolio"
-                class="inline-flex items-center px-8 py-4 bg-transparent border-2 border-mga-blue text-mga-blue font-bold rounded-full hover:bg-mga-blue hover:text-white transition-all transform hover:-translate-y-1 shadow-sm hover:shadow-mga-blue/30"
+                class="inline-flex items-center px-8 py-4 bg-mga-blue text-white font-bold rounded-full hover:bg-white hover:text-mga-blue border-2 border-transparent hover:border-mga-blue transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-mga-blue/30"
             >
                 Ver Portafolio Completo
             </a>

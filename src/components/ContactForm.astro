@@ -1,111 +1,126 @@
-<section class="py-24 bg-slate-900 text-white relative overflow-hidden">
-    <div
-        class="absolute top-0 right-0 w-[500px] h-[500px] bg-mga-blue/20 rounded-full blur-[100px] mix-blend-screen animate-pulse-slow"
-    >
-    </div>
-    <div
-        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-mga-orange/20 rounded-full blur-[100px] mix-blend-screen animate-pulse-slow font-sans"
-        style="animation-delay: 2s"
-    >
-    </div>
+<section
+    class="py-24 bg-mga-dark text-white relative overflow-hidden"
+    id="presupuesto"
+>
+    <!-- Background Decor - Removed for cleaner look -->
 
     <div
-        class="container mx-auto px-4 relative z-10 flex flex-col lg:flex-row items-center gap-16"
+        class="container mx-auto px-4 relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-20"
     >
-        <div class="lg:w-1/2">
+        <!-- Info Content -->
+        <div class="lg:w-5/10 pt-10">
             <span
-                class="text-mga-blue font-bold tracking-wider uppercase text-sm mb-2 block"
+                class="inline-block py-1 px-3 rounded-md bg-mga-blue/10 text-mga-blue font-bold tracking-wider uppercase text-xs mb-4"
                 >Experiencia Garantizada</span
             >
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                Expertos en consultoría electromecánica
-                <br />en todo el Perú
+            <h2
+                class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+            >
+                Expertos en consultoría <br />
+                electromecánica <br />
+                en todo el Perú
             </h2>
             <p
-                class="text-slate-300 text-lg mb-10 leading-relaxed text-left md:text-justify"
+                class="text-slate-300 text-lg mb-10 leading-relaxed text-justify"
             >
                 Nuestra experiencia abarca proyectos de electrificación y
                 sistemas electromecánicos de alta, media y baja tensión en todo
-                el Perú.
+                el Perú. Garantizamos cumplimiento normativo, control técnico,
+                seguridad y eficiencia en cada etapa del proyecto.
             </p>
 
-            <div class="space-y-6">
-                <div class="flex items-start gap-4">
+            <div class="space-y-8">
+                <div class="flex items-start gap-5 group">
                     <div
-                        class="w-12 h-12 rounded-2xl bg-white/5 backdrop-blur-sm flex items-center justify-center flex-shrink-0 border border-white/10 shadow-inner"
+                        class="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 border border-white/10 group-hover:bg-mga-blue transition-colors duration-300"
                     >
-                        <i class="fas fa-certificate text-mga-blue text-lg"></i>
+                        <i
+                            class="fas fa-certificate text-mga-blue text-xl group-hover:text-white transition-colors"
+                        ></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-white text-lg">
+                        <h4 class="font-bold text-white text-xl mb-1">
                             Certificación de Calidad
                         </h4>
-                        <p class="text-slate-400 text-sm">
+                        <p class="text-slate-400">
                             Procesos estandarizados y normas ISO.
                         </p>
                     </div>
                 </div>
-                <div class="flex items-start gap-4">
+
+                <div class="flex items-start gap-5 group">
                     <div
-                        class="w-12 h-12 rounded-2xl bg-white/5 backdrop-blur-sm flex items-center justify-center flex-shrink-0 border border-white/10 shadow-inner"
+                        class="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 border border-white/10 group-hover:bg-mga-orange transition-colors duration-300"
                     >
-                        <i class="fas fa-users-cog text-mga-orange text-lg"></i>
+                        <i
+                            class="fas fa-users-cog text-mga-orange text-xl group-hover:text-white transition-colors"
+                        ></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-white text-lg">
+                        <h4 class="font-bold text-white text-xl mb-1">
                             Equipo Senior Especializado
                         </h4>
-                        <p class="text-slate-400 text-sm">
+                        <p class="text-slate-400">
                             Profesionales con amplia trayectoria en campo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5 group">
+                    <div
+                        class="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 border border-white/10 group-hover:bg-green-500 transition-colors duration-300"
+                    >
+                        <i
+                            class="fas fa-shield-alt text-green-500 text-xl group-hover:text-white transition-colors"
+                        ></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-xl mb-1">
+                            Seguridad Primero
+                        </h4>
+                        <p class="text-slate-400 text-sm">
+                            Compromiso innegociable con la seguridad laboral y
+                            ambiental.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Quote Form Section Anchor -->
-        <div id="presupuesto" class="lg:w-1/2 w-full">
+        <!-- Form Section -->
+        <div class="lg:w-7/12 w-full">
             <div
-                class="bg-white/95 backdrop-blur-xl border border-white/20 text-slate-800 p-8 md:p-10 rounded-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] relative"
+                class="bg-white p-8 md:p-10 rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 relative"
             >
-                <div
-                    class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-mga-orange to-orange-500 rounded-2xl rotate-3 flex items-center justify-center shadow-lg shadow-orange-500/30 hidden md:flex transform transition-transform hover:rotate-6"
-                >
-                    <i class="fas fa-paper-plane text-white text-2xl"></i>
-                </div>
-
-                <h3 class="text-3xl font-bold text-slate-900 mb-2">
-                    Solicitar Presupuesto
+                <h3 class="text-2xl font-bold text-mga-dark mb-6">
+                    Solicitud de Cotización
                 </h3>
-                <p class="text-slate-500 mb-8 text-sm">
-                    Cuéntanos sobre tu proyecto y recibe una propuesta a medida.
-                </p>
 
                 <form id="quote-form" class="space-y-5">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
                             <label
-                                class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"
+                                class="block text-xs font-bold text-mga-gray uppercase tracking-wider mb-2"
                                 >Nombre Completo</label
                             >
                             <input
                                 type="text"
                                 name="name"
                                 required
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/50 focus:border-mga-blue transition-all"
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark font-medium"
                                 placeholder="Su Nombre"
                             />
                         </div>
                         <div>
                             <label
-                                class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"
-                                >Teléfono</label
+                                class="block text-xs font-bold text-mga-gray uppercase tracking-wider mb-2"
+                                >Teléfono / Celular</label
                             >
                             <input
                                 type="tel"
                                 name="phone"
                                 required
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/50 focus:border-mga-blue transition-all"
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark font-medium"
                                 placeholder="999 000 000"
                             />
                         </div>
@@ -113,13 +128,26 @@
 
                     <div>
                         <label
-                            class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"
-                            >Servicio de Interés</label
+                            class="block text-xs font-bold text-mga-gray uppercase tracking-wider mb-2"
+                            >Correo Electrónico</label
+                        >
+                        <input
+                            type="email"
+                            name="email"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark font-medium"
+                            placeholder="ejemplo@empresa.com"
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            class="block text-xs font-bold text-mga-gray uppercase tracking-wider mb-2"
+                            >Servicio Requerido</label
                         >
                         <div class="relative">
                             <select
                                 name="service"
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/50 focus:border-mga-blue transition-all appearance-none cursor-pointer"
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all appearance-none cursor-pointer text-mga-dark font-medium"
                                 required
                             >
                                 <option value="" disabled selected
@@ -128,11 +156,17 @@
                                 <option value="infraestructura"
                                     >Infraestructura Vial</option
                                 >
-                                <option value="energia">Energía y Redes</option>
-                                <option value="edificaciones"
-                                    >Edificaciones</option
+                                <option value="energia"
+                                    >Energía y Redes Eléctricas</option
                                 >
-                                <option value="ambiental">Medio Ambiente</option
+                                <option value="edificaciones"
+                                    >Edificaciones y Obras Civiles</option
+                                >
+                                <option value="ambiental"
+                                    >Estudios Medioambientales</option
+                                >
+                                <option value="consultoria"
+                                    >Consultoría y Supervisión</option
                                 >
                                 <option value="otro">Otro</option>
                             </select>
@@ -141,35 +175,50 @@
                             ></i>
                         </div>
                     </div>
+
                     <div>
                         <label
-                            class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"
+                            class="block text-xs font-bold text-mga-gray uppercase tracking-wider mb-2"
                             >Detalles del Proyecto</label
                         >
                         <textarea
                             name="details"
                             rows="3"
                             required
-                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/50 focus:border-mga-blue transition-all"
-                            placeholder="Breve descripción..."></textarea>
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark font-medium"
+                            placeholder="Describa brevemente su requerimiento..."
+                        ></textarea>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div
+                        class="w-full h-48 rounded-xl overflow-hidden shadow-inner border border-gray-200"
+                    >
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.008477033582!2d-79.8457223!3d-6.7719444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef02b6623191%3A0x62915234567890!2sC.%20Tacna%20651%2C%20Chiclayo%2014001!5e0!3m2!1ses!2spe!4v1705500000000!5m2!1ses!2spe"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        >
+                        </iframe>
                     </div>
 
                     <button
                         type="submit"
                         id="submit-btn"
-                        class="w-full bg-slate-900 hover:bg-mga-blue text-white py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl transform active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2 group"
+                        class="w-full bg-mga-dark hover:bg-slate-800 text-white py-4 rounded-xl font-bold text-lg transition-all border border-slate-700 hover:border-slate-600 disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2 group"
                     >
                         <span id="btn-text">Enviar Solicitud</span>
                         <i
-                            id="btn-spinner"
-                            class="fas fa-spinner fa-spin hidden"></i>
-                        <i
                             id="btn-icon"
-                            class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
+                            class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"
                         ></i>
                     </button>
-                    <p class="text-center text-xs text-slate-400">
-                        Respondemos en menos de 24 horas.
+                    <p class="text-center text-[10px] text-mga-gray/70">
+                        Al enviar, acepta nuestras políticas de privacidad.
                     </p>
                 </form>
             </div>
@@ -187,15 +236,19 @@
                 const btn = document.getElementById("submit-btn");
                 const btnText = document.getElementById("btn-text");
                 const spinner = document.getElementById("btn-spinner");
+                const icon = document.getElementById("btn-icon");
+
+                if (!btn || !btnText || !spinner || !icon) return;
 
                 // Loading State
-                btn.disabled = true;
+                (btn as HTMLButtonElement).disabled = true;
                 const originalText = btnText.textContent;
                 btnText.textContent = "Enviando...";
                 spinner.classList.remove("hidden");
-                document.getElementById("btn-icon").classList.add("hidden");
+                icon.classList.add("hidden");
 
                 // Collect Data
+                // @ts-ignore
                 const formData = new FormData(quoteForm);
                 const data = Object.fromEntries(formData.entries());
 
@@ -212,7 +265,7 @@
                             alert(
                                 "¡Solicitud enviada con éxito! Nos pondremos en contacto pronto.",
                             );
-                            quoteForm.reset();
+                            (quoteForm as HTMLFormElement).reset();
                         } else {
                             throw new Error("Error en el servidor");
                         }
@@ -225,12 +278,10 @@
                     })
                     .finally(() => {
                         // Reset State
-                        btn.disabled = false;
+                        (btn as HTMLButtonElement).disabled = false;
                         btnText.textContent = originalText;
                         spinner.classList.add("hidden");
-                        document
-                            .getElementById("btn-icon")
-                            .classList.remove("hidden");
+                        icon.classList.remove("hidden");
                     });
             });
         }
