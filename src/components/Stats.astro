@@ -1,35 +1,73 @@
-<section id="stats" class="py-12 relative z-30 -mt-24 mx-4 md:mx-auto max-w-6xl">
-    <div class="bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-gray-100 p-8 md:p-12">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-gray-100">
-            <div class="p-4 group hover:-translate-y-1 transition-transform duration-300">
+<section
+    id="stats"
+    class="py-12 relative z-30 -mt-24 mx-4 md:mx-auto max-w-6xl"
+>
+    <div
+        class="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] border border-slate-100 p-8 md:p-12 relative overflow-hidden"
+    >
+        <!-- Top Accent Line -->
+        <div
+            class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-mga-blue to-mga-orange"
+        >
+        </div>
+
+        <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-slate-100"
+        >
+            <div
+                class="p-4 group hover:-translate-y-1 transition-transform duration-300"
+            >
                 <div
-                    class="text-4xl md:text-5xl font-extrabold text-mga-blue mb-2 flex justify-center items-baseline group-hover:scale-110 transition-transform">
+                    class="text-4xl md:text-5xl font-extrabold text-mga-blue mb-2 flex justify-center items-baseline group-hover:scale-110 transition-transform"
+                >
                     +<span class="stat-number" data-target="15">0</span>
                 </div>
-                <div class="text-gray-400 font-bold text-xs uppercase tracking-widest mt-2">Años de Experiencia
+                <div
+                    class="text-slate-500 font-bold text-xs uppercase tracking-widest mt-2"
+                >
+                    Años de Experiencia
                 </div>
             </div>
-            <div class="p-4 group hover:-translate-y-1 transition-transform duration-300">
+            <div
+                class="p-4 group hover:-translate-y-1 transition-transform duration-300"
+            >
                 <div
-                    class="text-4xl md:text-5xl font-extrabold text-mga-orange mb-2 flex justify-center items-baseline group-hover:scale-110 transition-transform">
+                    class="text-4xl md:text-5xl font-extrabold text-mga-orange mb-2 flex justify-center items-baseline group-hover:scale-110 transition-transform"
+                >
                     +<span class="stat-number" data-target="100">0</span>
                 </div>
-                <div class="text-gray-400 font-bold text-xs uppercase tracking-widest mt-2">Proyectos Ejecutados
+                <div
+                    class="text-slate-500 font-bold text-xs uppercase tracking-widest mt-2"
+                >
+                    Proyectos Ejecutados
                 </div>
             </div>
-            <div class="p-4 group hover:-translate-y-1 transition-transform duration-300">
+            <div
+                class="p-4 group hover:-translate-y-1 transition-transform duration-300"
+            >
                 <div
-                    class="text-4xl md:text-5xl font-extrabold text-mga-blue mb-2 flex justify-center items-baseline group-hover:scale-110 transition-transform">
+                    class="text-4xl md:text-5xl font-extrabold text-mga-blue mb-2 flex justify-center items-baseline group-hover:scale-110 transition-transform"
+                >
                     +<span class="stat-number" data-target="7">0</span>
                 </div>
-                <div class="text-gray-400 font-bold text-xs uppercase tracking-widest mt-2">Profesionales</div>
-            </div>
-            <div class="p-4 group hover:-translate-y-1 transition-transform duration-300">
                 <div
-                    class="text-4xl md:text-5xl font-extrabold text-mga-dark mb-2 flex justify-center items-baseline group-hover:scale-110 transition-transform">
+                    class="text-slate-500 font-bold text-xs uppercase tracking-widest mt-2"
+                >
+                    Profesionales
+                </div>
+            </div>
+            <div
+                class="p-4 group hover:-translate-y-1 transition-transform duration-300"
+            >
+                <div
+                    class="text-4xl md:text-5xl font-extrabold text-mga-dark mb-2 flex justify-center items-baseline group-hover:scale-110 transition-transform"
+                >
                     <span class="stat-number" data-target="100">0</span>%
                 </div>
-                <div class="text-gray-400 font-bold text-xs uppercase tracking-widest mt-2">Clientes Satisfechos
+                <div
+                    class="text-slate-500 font-bold text-xs uppercase tracking-widest mt-2"
+                >
+                    Clientes Satisfechos
                 </div>
             </div>
         </div>
@@ -37,38 +75,43 @@
 </section>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const statsSection = document.getElementById('stats');
-        const statNumbers = document.querySelectorAll('.stat-number');
+    document.addEventListener("DOMContentLoaded", () => {
+        const statsSection = document.getElementById("stats");
+        const statNumbers = document.querySelectorAll(".stat-number");
         let started = false;
 
         if (statsSection && statNumbers.length > 0) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !started) {
-                        started = true;
-                        statNumbers.forEach(stat => {
-                            const target = parseInt(stat.getAttribute('data-target'));
-                            const duration = 2000; // ms
-                            const stepTime = 20;
-                            const steps = duration / stepTime;
-                            const increment = target / steps;
-                            let current = 0;
-                            
-                            const timer = setInterval(() => {
-                                current += increment;
-                                if (current >= target) {
-                                    stat.textContent = target;
-                                    clearInterval(timer);
-                                } else {
-                                    stat.textContent = Math.ceil(current);
-                                }
-                            }, stepTime);
-                        });
-                    }
-                });
-            }, { threshold: 0.5 });
-            
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting && !started) {
+                            started = true;
+                            statNumbers.forEach((stat) => {
+                                const target = parseInt(
+                                    stat.getAttribute("data-target"),
+                                );
+                                const duration = 2000; // ms
+                                const stepTime = 20;
+                                const steps = duration / stepTime;
+                                const increment = target / steps;
+                                let current = 0;
+
+                                const timer = setInterval(() => {
+                                    current += increment;
+                                    if (current >= target) {
+                                        stat.textContent = target;
+                                        clearInterval(timer);
+                                    } else {
+                                        stat.textContent = Math.ceil(current);
+                                    }
+                                }, stepTime);
+                            });
+                        }
+                    });
+                },
+                { threshold: 0.5 },
+            );
+
             observer.observe(statsSection);
         }
     });

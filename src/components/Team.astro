@@ -1,0 +1,85 @@
+---
+const team = [
+    {
+        name: "Ing. Miguel García",
+        role: "Gerente General",
+        desc: "Ingeniero Civil con más de 20 años de experiencia en gestión de proyectos de infraestructura y edificación.",
+        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+        name: "Arq. Sofia Mendoza",
+        role: "Directora de Proyectos",
+        desc: "Especialista en diseño sostenible y planificación urbana, liderando equipos multidisciplinarios.",
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+        name: "Ing. Carlos Ruiz",
+        role: "Jefe de Operaciones",
+        desc: "Experto en control de calidad y seguridad en obra, asegurando el cumplimiento de estándares internacionales.",
+        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+        name: "Ing. Ana Torres",
+        role: "Especialista en Energía",
+        desc: "Ingeniera Eléctrica enfocada en soluciones de eficiencia energética y energías renovables.",
+        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+        name: "Lic. Pedro Castillo",
+        role: "Gestión Ambiental",
+        desc: "Consultor ambiental con amplia trayectoria en evaluación de impacto y normatividad vigente.",
+        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+        name: "Ing. Luis Navarro",
+        role: "Ingeniero Estructural",
+        desc: "Especialista en cálculo y diseño estructural para edificaciones de gran envergadura y obras civiles.",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+];
+---
+
+<section id="equipo" class="py-20 bg-white border-t border-slate-100">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+            <span
+                class="text-white font-bold tracking-wider uppercase text-xs bg-mga-blue px-3 py-1 rounded-full shadow-md"
+                >Talento Humano</span
+            >
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 mb-4">
+                Nuestro Equipo
+            </h2>
+            <p class="text-slate-600 text-base max-w-xl mx-auto">
+                Profesionales comprometidos con el éxito de cada proyecto.
+            </p>
+        </div>
+
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
+        >
+            {
+                team.map((member) => (
+                    <div class="group text-center p-6 rounded-2xl border border-slate-100 bg-white hover:border-mga-blue hover:shadow-xl hover:shadow-mga-blue/10 hover:-translate-y-1 transition-all duration-300">
+                        <div class="relative w-32 h-32 mx-auto mb-6">
+                            <div class="absolute inset-0 rounded-full bg-blue-100 scale-100 group-hover:scale-110 transition-transform duration-300" />
+                            <img
+                                src={member.image}
+                                alt={member.name}
+                                class="w-full h-full object-cover rounded-full border-2 border-mga-orange shadow-md relative z-10 grayscale group-hover:grayscale-0 transition-all duration-500"
+                            />
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-mga-blue transition-colors">
+                            {member.name}
+                        </h3>
+                        <span class="text-mga-orange font-bold text-xs uppercase tracking-wide block mb-3">
+                            {member.role}
+                        </span>
+                        <p class="text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-3">
+                            {member.desc}
+                        </p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
