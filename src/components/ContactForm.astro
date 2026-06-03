@@ -88,9 +88,9 @@
         <!-- Form Section -->
         <div class="w-full lg:w-1/2">
             <div
-                class="bg-white p-8 md:p-10 rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 relative"
+                class="bg-white dark:bg-slate-900 p-8 md:p-10 rounded-2xl shadow-xl shadow-gray-200/50 dark:shadow-black/50 border border-gray-100 dark:border-slate-800 relative"
             >
-                <h3 class="text-2xl font-bold text-mga-dark mb-6">
+                <h3 class="text-2xl font-bold text-mga-dark dark:text-white mb-6">
                     Solicitud de Cotización
                 </h3>
 
@@ -98,27 +98,27 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
                             <label
-                                class="block text-xs font-bold text-mga-gray uppercase tracking-wider mb-2"
+                                class="block text-xs font-bold text-mga-gray dark:text-slate-400 uppercase tracking-wider mb-2"
                                 >Nombre Completo</label
                             >
                             <input
                                 type="text"
                                 name="name"
                                 required
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark font-medium"
+                                class="w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark dark:text-white font-medium placeholder:text-gray-400 dark:placeholder:text-slate-500"
                                 placeholder="Su Nombre"
                             />
                         </div>
                         <div>
                             <label
-                                class="block text-xs font-bold text-mga-gray uppercase tracking-wider mb-2"
+                                class="block text-xs font-bold text-mga-gray dark:text-slate-400 uppercase tracking-wider mb-2"
                                 >Teléfono / Celular</label
                             >
                             <input
                                 type="tel"
                                 name="phone"
                                 required
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark font-medium"
+                                class="w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark dark:text-white font-medium placeholder:text-gray-400 dark:placeholder:text-slate-500"
                                 placeholder="999 000 000"
                             />
                         </div>
@@ -126,26 +126,26 @@
 
                     <div>
                         <label
-                            class="block text-xs font-bold text-mga-gray uppercase tracking-wider mb-2"
+                            class="block text-xs font-bold text-mga-gray dark:text-slate-400 uppercase tracking-wider mb-2"
                             >Correo Electrónico</label
                         >
                         <input
                             type="email"
                             name="email"
-                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark font-medium"
+                            class="w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark dark:text-white font-medium placeholder:text-gray-400 dark:placeholder:text-slate-500"
                             placeholder="ejemplo@empresa.com"
                         />
                     </div>
 
                     <div>
                         <label
-                            class="block text-xs font-bold text-mga-gray uppercase tracking-wider mb-2"
+                            class="block text-xs font-bold text-mga-gray dark:text-slate-400 uppercase tracking-wider mb-2"
                             >Servicio Requerido</label
                         >
                         <div class="relative">
                             <select
                                 name="service"
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all appearance-none cursor-pointer text-mga-dark font-medium"
+                                class="w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all appearance-none cursor-pointer text-mga-dark dark:text-white font-medium"
                                 required
                             >
                                 <option value="" disabled selected
@@ -176,21 +176,21 @@
 
                     <div>
                         <label
-                            class="block text-xs font-bold text-mga-gray uppercase tracking-wider mb-2"
+                            class="block text-xs font-bold text-mga-gray dark:text-slate-400 uppercase tracking-wider mb-2"
                             >Detalles del Proyecto</label
                         >
                         <textarea
                             name="details"
                             rows="3"
                             required
-                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark font-medium"
+                            class="w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-mga-blue/20 focus:border-mga-blue transition-all text-mga-dark dark:text-white font-medium placeholder:text-gray-400 dark:placeholder:text-slate-500"
                             placeholder="Describa brevemente su requerimiento..."
                         ></textarea>
                     </div>
 
                     <!-- Google Maps Embed -->
                     <div
-                        class="w-full h-48 rounded-xl overflow-hidden shadow-inner border border-gray-200"
+                        class="w-full h-48 rounded-xl overflow-hidden shadow-inner border border-gray-200 dark:border-slate-700"
                     >
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9598195920257!2d-79.8379132!3d-6.7747452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef78b49c4349%3A0x1a8e71aa9051c704!2sMGA%20INGENIEROS%20ASOCIADOS%20EIRL!5e0!3m2!1ses!2spe!4v1768673394510!5m2!1ses!2spe"
@@ -207,7 +207,7 @@
                     <button
                         type="submit"
                         id="submit-btn"
-                        class="w-full bg-mga-dark hover:bg-slate-800 text-white py-4 rounded-xl font-bold text-lg transition-all border border-slate-700 hover:border-slate-600 disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2 group"
+                        class="w-full bg-mga-dark dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white py-4 rounded-xl font-bold text-lg transition-all border border-slate-700 dark:border-slate-600 hover:border-slate-600 flex justify-center items-center gap-2 group"
                     >
                         <span id="btn-text">Enviar Solicitud</span>
                         <i

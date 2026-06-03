@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-mga-blue: #21B9EB;
     --color-mga-orange: #FDA95B;
@@ -56,11 +58,23 @@
     background: #f1f1f1;
 }
 
+.dark ::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
 ::-webkit-scrollbar-thumb {
     background: #c1c1c1;
     border-radius: 5px;
 }
 
+.dark ::-webkit-scrollbar-thumb {
+    background: #334155;
+}
+
 ::-webkit-scrollbar-thumb:hover {
     background: #a8a8a8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
 }

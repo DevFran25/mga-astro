@@ -47,8 +47,20 @@ const {
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		/>
+
+		<script is:inline>
+			if (
+				localStorage.getItem("color-theme") === "dark" ||
+				(!("color-theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				document.documentElement.classList.add("dark");
+			} else {
+				document.documentElement.classList.remove("dark");
+			}
+		</script>
 	</head>
-	<body class="bg-gray-50 text-mga-gray font-sans antialiased w-full">
+	<body class="bg-gray-50 text-mga-gray dark:bg-slate-950 dark:text-gray-300 font-sans antialiased w-full">
 		<main class="w-full overflow-x-hidden relative">
 			<slot />
 		</main>
